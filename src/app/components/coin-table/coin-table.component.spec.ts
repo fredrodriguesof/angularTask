@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TableOfCoinsComponent } from './table-of-coins.component';
+import { CoinTableComponent } from './coin-table.component';
 
-describe('TableOfCoinsComponent', () => {
-  let component: TableOfCoinsComponent;
-  let fixture: ComponentFixture<TableOfCoinsComponent>;
+describe('CoinTableComponent', () => {
+  let component: CoinTableComponent;
+  let fixture: ComponentFixture<CoinTableComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TableOfCoinsComponent ]
+      declarations: [ CoinTableComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TableOfCoinsComponent);
+    fixture = TestBed.createComponent(CoinTableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
