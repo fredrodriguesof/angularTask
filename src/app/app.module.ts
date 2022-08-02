@@ -4,16 +4,19 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MarketsComponent } from './markets/markets.component';
-import { DetailComponent } from './detail/detail.component';
+import { MarketsComponent } from './pages/markets/markets.component';
+import { DetailComponent } from './pages/markets/detail/detail.component';
 import { SearchPipe } from './filtros/search.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
-import { FormsModule } from '@angular/forms';
+import { MatSortModule } from '@angular/material/sort';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { NavComponent } from './nav/nav.component';
-import { HomeComponent } from './home/home.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { FormsModule } from '@angular/forms';
+
+import { NavComponent } from './components/nav/nav.component';
+import { HomeComponent } from './pages/home/home.component';
 
 
 @NgModule({
@@ -23,9 +26,20 @@ import { HomeComponent } from './home/home.component';
     DetailComponent,
     SearchPipe,
     NavComponent,
-    HomeComponent,
+    HomeComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, BrowserAnimationsModule,  MatTableModule, FormsModule, MatFormFieldModule, MatInputModule  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSortModule,
+    MatPaginatorModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
