@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-7">
+    <dl>
+      <dt>Name</dt>
+      <dd>{{ coin.name }}</dd>
+    </dl>
+    <dl>
+      <dt>Symbol</dt>
+      <dd>{{ coin.symbol | uppercase }}</dd>
+    </dl>
+    <dl>
+      <dt>Date</dt>
+      <dd>{{ coin.genesis_date }}</dd>
+    </dl>
+
+    <dl>
+      <dt>Categories</dt>
+      <dd>{{ coin.categories }}</dd>
+    </dl>
+
+    <dl>
+      <dt>ID</dt>
+      <dd>{{ coin.id }}</dd>
+    </dl>
+    <dl>
+      <dt>Description</dt>
+      <dd>{{ coin.desc }}</dd>
+    </dl>
+  </div>
+  <div class="col-5">
+    <img src="{{ coin.image }}" class="card-img-top" />
+  </div>
+</div>

@@ -4,23 +4,25 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MarketsComponent } from './markets/markets.component';
+import { DetailComponent } from './detail/detail.component';
+import { SearchPipe } from './filtros/search.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CoinTableComponent } from './components/coin-table/coin-table.component';
 import { MatTableModule } from '@angular/material/table';
+import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    CoinTableComponent
+    MarketsComponent,
+    DetailComponent,
+    SearchPipe,
   ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatTableModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, BrowserAnimationsModule,  MatTableModule, FormsModule, MatFormFieldModule, MatInputModule  ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
