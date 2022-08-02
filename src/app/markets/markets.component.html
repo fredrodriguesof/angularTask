@@ -1,4 +1,4 @@
-<h1 class="text-center display-4 my-4">Coins</h1>
+<h1 class="">Coins</h1>
 
 <!-- <div class="form-group">
   <input
@@ -58,10 +58,6 @@
   </table>
 </ng-template> -->
 
-<mat-form-field appearance="standard">
-  <mat-label>Filter</mat-label>
-  <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input />
-</mat-form-field>
 
 <ng-container *ngIf="isLoading(); else loaded">
   <div class="spinner-border" role="status">
@@ -70,6 +66,11 @@
 </ng-container>
 
 <ng-template #loaded>
+  <mat-form-field appearance="standard">
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input />
+  </mat-form-field>
+
   <table mat-table [dataSource]="coins" class="mat-elevation-z8">
     <!--- Note that these columns can be defined in any order.
         The actual rendered columns are set as a property on the row definition" -->
@@ -112,7 +113,7 @@
     <!-- Row shown when there is no matching data. -->
     <tr class="mat-row" *matNoDataRow>
       <td class="mat-cell" colspan="4">
-        No data matching the filter "{{ input.value }}"
+        No data matching the filter "{{ input.name }}"
       </td>
     </tr>
   </table>

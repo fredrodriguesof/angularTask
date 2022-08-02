@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CryptoService } from '../services/crypto.service';
-import { CoinService } from '../services/coin.service';
 import { FiltrosService } from '../services/filtros.service';
 import { MatTableDataSource } from '@angular/material/table';
 
@@ -26,7 +25,6 @@ export class MarketsComponent implements OnInit {
 
   constructor(
     private cryptoService: CryptoService,
-    private coinService: CoinService,
     private filterService: FiltrosService
   ) {
     this.cryptoService.getMarkets().subscribe((res: any) => {
@@ -37,20 +35,8 @@ export class MarketsComponent implements OnInit {
     });
   }
 
-  getCoins() {
-    return this.coinService.getInfoCoins();
-  }
-
-  getAllCoins() {
-    return this.coins;
-  }
-
   isLoading() {
     return this.cryptoService.getIsLoading();
-  }
-
-  seeMore(coin: any) {
-    this.coinService.getCoinInfo(coin);
   }
 
   getPatron() {
