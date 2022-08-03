@@ -1,3 +1,10 @@
+<div fxLayout fxLayoutAlign="center center">
+  <mat-form-field fxFlex="40%">
+    <!-- <input matInput type="text" (keyup)="filter($event.target.value)" placeholder="Filter"> -->
+    <input matInput type="text" (keyup)="filter($event.target)" placeholder="Filter for Name, Symbol or ID">
+  </mat-form-field>
+</div>
+
 <div class="mat-elevation-z8">
   <table mat-table [dataSource]="dataSource" matSort (matSortChange)="announceSortChange($event)" class="mat-elevation-z8">
     <ng-container matColumnDef="name">

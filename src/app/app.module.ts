@@ -14,6 +14,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { FormsModule } from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -38,7 +39,8 @@ import { HomeComponent } from './pages/home/home.component';
     MatFormFieldModule,
     MatInputModule,
     MatSortModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -36,4 +36,12 @@ export class MarketsComponent {
     }
   }
 
+  public filter = (eventTarget: EventTarget | null) => {
+    const target = eventTarget as HTMLInputElement;
+    if (target) {
+      const value = target.value;
+      this.dataSource.filter = value.trim().toLocaleLowerCase();
+    }
+  }
+
 }
